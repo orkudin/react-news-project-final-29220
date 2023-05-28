@@ -14,13 +14,9 @@ import Movie from "./pages/Movie";
 import Sport from "./pages/Sport";
 import Popular from "./pages/Popular";
 
-// import {articles} from "./components/news_components/news_list/news_list"
-
-import CurrencyConverter from "./components/currency_converter/currency_converter_api/currency_converter";
-// import CurrencyConverter from './components/CurrencyConverter';
 
 function App() {
-  let newsApi = "1c97eb92463b4786bc8c16e9d1598f7f";
+  let newsApi = "4785429065c9459eb2f8bde6256ce9c7";
   let currencyApi = "4JbzDjxRrl4AfOvViI5MRMUL02ux6Xzh";
   return (
     <div>

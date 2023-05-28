@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { auth, db } from "../../../firebase";
 import {
   addDoc,
@@ -14,7 +14,7 @@ import "./add_to_favorite.css";
 const FavoriteButton = ({ item }) => {
   const favoritesRef = collection(db, "favorites"); //Коллекция "favorites" в firebase
   const [isFavorite, setIsFavorite] = useState(item.isFavorite);
-  console.log(item.isFavorite);
+  // console.log(item.isFavorite);
 
   const addToFavorites = async () => {
     const favoritesQuery = query(

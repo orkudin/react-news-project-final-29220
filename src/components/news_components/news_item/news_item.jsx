@@ -2,6 +2,7 @@ import React from "react";
 import "./news_item.css";
 import FavoriteButton from "../add_to_favorite/add_to_favorite";
 import { UserAuth } from "../../../context/AuthContext";
+import DeleteNews from "../delete_news/delete_news";
 
 const NewsItem = ({
   title,
@@ -11,7 +12,7 @@ const NewsItem = ({
   publishedAt,
   articles,
 }) => {
-  const { user, logout } = UserAuth();
+  const { user} = UserAuth();
 
   return (
     <div class="grid-item">
@@ -20,14 +21,17 @@ const NewsItem = ({
       </div>
 
       {user ? <FavoriteButton item={articles} /> : null}
+
+      <DeleteNews item={articles}/> 
       
-      <div class="info">
+
+      <div className="info">
         <h3>{title}</h3>
-        <div class="info-text">
+        <div className="info-text">
           <p>{description}</p>
         </div>
-        <div class="button-wrap">
-          <a class="atuin-btn" href={url}>
+        <div className="button-wrap">
+          <a className="atuin-btn" href={url}>
             Read More
           </a>
         </div>

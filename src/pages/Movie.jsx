@@ -4,8 +4,6 @@ import Header from "../components/news_components/header/header";
 
 const Movie = ({ newsApi }) => {
   var type_s = "movie";
-  // let newsApi = '72bcf1a53ce14dccb9985f97dbdeee6b'
-
   return (
     <>
       <Header />

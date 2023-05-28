@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import NewsItem from "../news_item/news_item";
 import "./search.css";
-import FavoriteButton from "../add_to_favorite/add_to_favorite";
 
 export default class Search extends Component {
-
   constructor(props) {
     super(props);
 
@@ -55,7 +53,7 @@ export default class Search extends Component {
   };
 
   inputClickHandler = (e) => {
-    //используется для опредее=ления isOpen на true
+    //используется для определения isOpen на true
     if (this.state.isSelect) {
       e.target.select();
     }
@@ -120,7 +118,7 @@ export default class Search extends Component {
                 url={articles.url}
                 urlToImage={articles.urlToImage}
                 publishedAt={articles.publishedAt}
-                articles = {articles}
+                articles={articles}
               />
             </>
           );

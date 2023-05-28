@@ -1,27 +1,6 @@
-/* .news-app{
-    display: inline-flex;
-    justify-content: center;
-    margin: 1%;
-
-}
-.news-item{
-    width: 500px;
-    padding: 20px;
-    border: 500px;
-    border: 1px solid;
-    margin-bottom: 20px;
-}
-.news-img{
-    object-fit: cover;
-    width: 400px;
-    height: 300px;
-} */
-
 .grid-item {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
     transition: box-shadow .3s;
-    /* width: 90%; */
-    /* height: 1%;   */
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -72,7 +51,7 @@
     left: 0;
     text-align: center;
 }
-/* Кнопка подробнее */
+
 .atuin-btn {
     display: inline-flex;
     text-decoration: none;
@@ -88,6 +67,7 @@
     cursor: pointer; 
     border: 2px solid #BFE2FF;
 }
+
 .atuin-btn:hover,
 .atuin-btn:active,
 .atuin-btn:focus {
