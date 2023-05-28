@@ -76,7 +76,7 @@ const Account = () => {
       {newsFavorites.map((articles) => {
         //list
         return (
-          <>
+          <div className="max-w-[600px] mx-auto my-10 p-4">
             <NewsItem
               title={articles.favorites_item.title}
               description={articles.favorites_item.description}
@@ -85,7 +85,7 @@ const Account = () => {
               publishedAt={articles.favorites_item.publishedAt}
               articles={articles}
             />
-          </>
+          </div>
         );
       })}
     </>

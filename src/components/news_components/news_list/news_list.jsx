@@ -12,8 +12,6 @@ const NewsList = ({ type, start, end, newsApi }) => {
 
   useEffect(() => {
     loadAllFavorites(); //загрузка данных из "favorites" в firebase при авторизации
-
-
   }, [user]);
 
   const loadAllFavorites = async () => {
@@ -31,21 +29,10 @@ const NewsList = ({ type, start, end, newsApi }) => {
         console.log("Favorite item:", data);
       });
       setNewsFavorites(newsFavorites);
-
-
-
-
     } else {
       console.log("No favorite items found.");
     }
   };
-
-  useEffect(() => {
-    // console.log(newsFavorites)
-    newsFavorites.map((news) => {
-      console.log(news + "<==");
-    });
-  }, []);
 
   useEffect(() => {
     const getArticles = async () => {
@@ -55,25 +42,29 @@ const NewsList = ({ type, start, end, newsApi }) => {
       let array = [];
       for (let i = start; i < end; i++) {
         const article = response.data.articles[i];
-        // article["isFavorite"] = "false"; // Add new key/value pair
+        article["isFavorite"] = false; // Add new key/value pair
         array.push(article);
       }
-      console.log(array);
-
+      // console.log(array);
 
       const updatedArticles = array.map((article) => {
-        const matchedFavorite = newsFavorites.find((favorite) => favorite.url === article.url);
+        const matchedFavorite = newsFavorites.find(
+          (favorite) => favorite.url === article.url
+        );
         if (matchedFavorite) {
           return { ...article, isFavorite: true };
         }
         return article;
       });
-
-      console.log(updatedArticles)
-      setArticles(updatedArticles);
+      
+      if (newsFavorites.length !== 0) {
+        console.log(newsFavorites);
+        console.log(updatedArticles);
+        setArticles(updatedArticles);
+      }
     };
     getArticles();
-  }, [type, start, end, newsApi, user, newsFavorites]);
+  }, [type, start, end, newsApi, newsFavorites]);
 
   return (
     <div>

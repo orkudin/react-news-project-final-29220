@@ -11,11 +11,11 @@ function account_bar() {
       <ul class="button-group">
         {user && user.email ? (
           <li class="button">
-            <Link to="/account">{(user && user.email) || "SIGN IN"}</Link>
+            <Link to="/account">{"FAVORITES" || "SIGN IN"}</Link>
           </li>
         ) : (
           <li class="button">
-            <Link to="/signin">{(user && user.email) || "SIGN IN"}</Link>
+            <Link to="/signin">{"FAVORITES" || "SIGN IN"}</Link>
           </li>
         )}
 
