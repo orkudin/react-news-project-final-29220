@@ -1,0 +1,13 @@
+.currency-body{
+    margin-top: 20px;
+    background-color: #1f152e;
+    color: #ddd;
+    padding: 8%;
+    border-radius: 15px;
+}
+h1{
+    font-size: calc(1.5rem + 6 * (100vw - 320px) / 880);
+    color: #eef;
+    text-align: center;
+    margin-bottom: 5%;
+}
